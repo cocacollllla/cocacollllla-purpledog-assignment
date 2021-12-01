@@ -31,7 +31,22 @@ const Detail = () => {
       contentsArr.push(tmp);
       return contentsArr;
     }
+
   });
+
+
+  const timestamp = (stamp) => {
+    let myDate = new Date(stamp * 1000);
+    let year = myDate.getFullYear();
+    let month = myDate.getMonth()+1;
+    let date = myDate.getDate();
+    let hour = ("00" + myDate.getHours()).slice(-2);
+    let minute = ("00" + myDate.getMinutes()).slice(-2);
+    let second = ("00" + myDate.getSeconds()).slice(-2);
+    let time = `${year}/${month}/${date} ${hour}:${minute}:${second}`
+
+    return time;
+  }
 
 
   const exception = (exe) => {
@@ -47,6 +62,8 @@ const Detail = () => {
       return <Tablebody><a href={exe[1]}>{exe[1]}</a></Tablebody>
     } else if(exe[0] === 'text') {
       return <Tablebody dangerouslySetInnerHTML={ {__html: exe[1]} }></Tablebody>
+    } else if(exe[0] === 'time') {
+      return <Tablebody>{timestamp(exe[1])}</Tablebody>
     } else {
       return <Tablebody>{exe[1]}</Tablebody>
     }
