@@ -16,7 +16,7 @@
 
 ## 시연영상
 
-<img src="https://user-images.githubusercontent.com/86454345/144250168-cd8d39c4-47f3-4355-9a4c-76707766a1ea.gif)" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="gif파일"></img>
+![file](https://user-images.githubusercontent.com/86454345/144250168-cd8d39c4-47f3-4355-9a4c-76707766a1ea.gif)
 
 ## 설치 및 시작 방법
 
